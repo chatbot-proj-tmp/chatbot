@@ -1,0 +1,32 @@
+version: '3.8'
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/chatbot.conf:/etc/nginx/conf.d/chatbot.conf:ro
+      - /etc/letsencrypt/:/etc/letsencrypt/:ro
+      - ./frontend:/usr/share/nginx/html:ro
+    networks:
+      - app-network
+    restart: always 
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    expose:
+      - "3000"
+    environment:
+      - PORT=3000
+    env_file:
+      - .env
+    networks:
+      - app-network
+    restart: always 
+networks:
+  app-network:
+    driver: bridge
