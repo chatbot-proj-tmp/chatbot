@@ -366,7 +366,11 @@ const setLangDropdown = () => {
         langDropdown.classList.remove('fade-out');
       }, 300);
 
-      if (preLang !== language) {      
+      if (preLang !== language) {  
+        if (!document.querySelector('.message.user')) {
+          document.querySelector('.bot-message-container').remove(); 
+        }
+
         sendDefaultMesage();
         setModal();
         setUserInputPlaceHolder();
