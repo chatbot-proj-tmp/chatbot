@@ -1,0 +1,22 @@
+# py
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+*.env
+*.lock
+uv.lock
+
+# venv, env
+venv/
+env/
+.venv/
+.env/
+
+# aws ec2 key
+chatbot-key.pem
+
+# pdfs
+backend/app/pdfs/*

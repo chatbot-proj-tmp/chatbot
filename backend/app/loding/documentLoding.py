@@ -4,7 +4,7 @@ from typing import List, Dict
 import re
 from pathlib import Path
 
-load_dotenv("apikey.env")  # .env 로드
+load_dotenv(".env")  # .env 로드
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 os.environ["PINECONE_API_KEY"] = os.getenv("PINECONE_API_KEY")
 
