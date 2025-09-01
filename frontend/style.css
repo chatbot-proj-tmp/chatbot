@@ -12,6 +12,54 @@ body {
   right: 60px;
 }
 
+/* iPhone SE (375px 이하) */
+@media (max-width: 375px) {
+  #chatbot-container {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* iPhone 12 Pro, 14 Pro Max, Galaxy S20 Ultra (376px ~ 480px) */
+@media (min-width: 376px) and (max-width: 480px) {
+  #chatbot-container {
+    bottom: 25px;
+    right: 25px;
+  }
+}
+
+/* iPad Mini (768px) */
+@media (min-width: 700px) and (max-width: 820px) {
+  #chatbot-container {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+/* iPad, iPad Air (820px ~ 1024px) */
+@media (min-width: 821px) and (max-width: 1080px) {
+  #chatbot-container {
+    bottom: 40px;
+    right: 40px;
+  }
+}
+
+/* iPad Pro (1024px ~ 1440px) */
+@media (min-width: 1081px) and (max-width: 1440px) {
+  #chatbot-container {
+    bottom: 50px;
+    right: 50px;
+  }
+}
+
+/* FHD ~ QHD (1441px 이상) */
+@media (min-width: 1441px) {
+  #chatbot-container {
+    bottom: 60px;
+    right: 60px;
+  }
+}
+
 #chatbot {
   display: flex;
   flex-direction: column;
@@ -37,9 +85,9 @@ body {
     transform: translateY(100%) !important;
   }
 
-    #chatbot-container.expanded #chatbot {
-      transform: translateY(0) !important;
-    }
+  #chatbot-container.expanded #chatbot {
+    transform: translateY(0) !important;
+  }
 }
 
 /* 스크롤 금지 */
@@ -78,8 +126,43 @@ body {
 /********** 4. 챗봇 토글 버튼  **********/
 #chatbot-toggle-btn {
   cursor: pointer;
-  width: 160px; 
+  max-width: 160px;
   height: auto;
+}
+
+/* iPhone SE (375px 이하) */
+@media (max-width: 375px) {
+  #chatbot-toggle-btn {
+    width: 30vw;
+  }
+}
+
+/* iPhone 12 Pro, 14 Pro Max, Galaxy S20 Ultra (376px ~ 480px) */
+@media (min-width: 376px) and (max-width: 480px) {
+  #chatbot-toggle-btn {
+    width: 30vw;
+  }
+}
+
+/* iPad Mini (768px) */
+@media (min-width: 700px) and (max-width: 820px) {
+  #chatbot-toggle-btn {
+    width: 25vw;
+  }
+}
+
+/* iPad, iPad Air (820px ~ 1024px) */
+@media (min-width: 821px) and (max-width: 1080px) {
+  #chatbot-toggle-btn {
+    width: 15vw;
+  }
+}
+
+/* iPad Pro (1024px ~ 1440px) */
+@media (min-width: 1081px) and (max-width: 1440px) {
+  #chatbot-toggle-btn {
+    width: 12vw;
+  }
 }
 
 #chatbot-toggle-btn:hover {
