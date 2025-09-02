@@ -17,6 +17,3 @@ env/
 
 # aws ec2 key
 chatbot-key.pem
-
-# pdfs
-backend/app/pdfs/*
